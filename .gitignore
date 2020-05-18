@@ -1,23 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+/keybrasil/node_modules
+/keybrasil/.pnp
+/keybrasil/.pnp.js
 
 # testing
-/coverage
+/keybrasil/coverage
 
 # production
-/build
+/keybrasil/build
 
 # misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+/keybrasil/.DS_Store
+/keybrasil/.env.local
+/keybrasil/.env.development.local
+/keybrasil/.env.test.local
+/keybrasil/.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+/keybrasil/npm-debug.log*
+/keybrasil/yarn-debug.log*
+/keybrasil/yarn-error.log*

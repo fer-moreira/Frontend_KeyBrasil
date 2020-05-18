@@ -1,0 +1,288 @@
+.navbar {
+    box-shadow: 0px 2px 5px rgba(77, 77, 77, 0.1);
+    box-sizing: border-box;
+
+    &__grid {
+        display: grid;
+        grid-template-rows: 30px 70px 50px;
+        box-sizing: border-box;
+
+        &__top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            box-sizing: border-box;
+            
+            background-color: white;
+            box-shadow: 0px 0px 3px #000000;
+            z-index: 5;
+            padding: 5px;
+            width: 100%;
+            
+
+            &__icons {
+                display: flex;
+                flex-direction: row;
+                margin-left: 20px;
+
+                &__icon {
+                    max-width:17px; 
+                    max-height:17px;
+                    width:auto;
+                    height:auto;
+                    margin: 0px 12px;
+                }
+            }
+
+            &__text {
+                margin-right: 20px;
+                &__span {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &__search {
+            background-color: white;
+            z-index: 4;
+            padding: 5px;
+            display: grid;
+            grid-template-columns: 30% 50% 20%;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+
+            &__logo {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                &__icon {
+                    max-width:70px;
+                    max-height:70px;
+                    width:auto;
+                    height:auto;
+                    margin: 0px 12px;
+                }
+                &__name {
+                    font-size: 30px;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-weight: 500;
+                }
+            }
+
+            &__inputfield {
+                background-color: #DFE8EB;
+                display: grid;
+                grid-template-columns: 75% 25%;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 150px;
+                overflow: hidden;
+                height: 80%;
+                
+                &__field {
+                    height: 100%;
+                    border: none;
+                    box-sizing: border-box;
+                    background-color: transparent;
+                    padding: 0px 30px;
+                    vertical-align: middle;
+                    color: rgb(0, 0, 0);
+                    font-size: 20px;
+                    font-weight: 700;
+                    outline: none;
+
+                    &::placeholder {
+                        font-size: 20px;
+                        font-weight: 400;
+                        vertical-align: middle;
+                        color: #9FBAC2;
+                    }
+
+                    &:focus {
+                        text-decoration: none;
+                        border: none;
+                        outline: none;
+                    }
+                }
+
+                &__button {
+                    height: 80%;
+                    border: none;
+                    margin: 5px;
+                    background-color: white;
+                    border-radius: 150px;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 15px;
+                    font-weight: 300;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 100ms filter ease-in;
+
+                    outline: none;
+
+                    &__icon {
+                        max-width:20px;
+                        max-height:20px;
+                        width:auto;
+                        height:auto;
+                        margin-left: 10px;
+                    }
+
+                    &:hover {
+                        filter: invert(100%);
+                    }
+
+                    &:active {
+                        filter: invert(0%);
+                    }
+                }
+            }
+
+            &__cart {
+                padding: 0px 20%;
+
+                &__button {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    padding: 8px 10px;
+
+                    &__icon {
+                        max-width:30px;
+                        max-height:30px;
+                        width:auto;
+                        height:auto;
+
+                        background-color: black;
+                        border-radius: 360px;
+                        padding: 5px;
+                        margin-right: 10px;
+
+                        transition: 200ms filter, 200ms background-color, 200ms color;
+
+                    }
+                    &__text {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-weight: 300;
+                        font-size: 20px;
+                    }
+
+                    &:hover {
+                        border-radius: 50px;
+                        background-color: black;
+
+                        .navbar__grid__search__cart__button__icon {
+                            filter: invert(100%)
+                        }
+
+                        .navbar__grid__search__cart__button__text {
+                            color: white;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &__buttons {
+            background-color: black;
+            z-index: 3;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            justify-content: space-between;
+            align-items: center;
+
+            &__left {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+
+                &__buttons {
+                    height: 100%;
+                    &__home {
+                        height: 100%;
+                        width: 180px;
+                        background-color: white;
+
+                        &__btn {
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            &__icon {
+                                max-width:40px;
+                                max-height:40px;
+                                width:auto;
+                                height:auto;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__right {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                height: 100%;
+
+                &__buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    margin-right: 80px;
+
+
+                    .vertical_line {
+                        height: 40%;
+                        width: 1px;
+                        background-color: white;
+                        margin: 0px 5px;
+                    }
+
+                    &__btn.open {
+                        color: black;
+                        background-color: white;
+                    }
+
+                    &__btn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-sizing: border-box;
+                        font-size: 20px;
+                        font-weight: 300;
+                        text-align: center;
+                        min-width: 100px;
+                        padding: 0px 30px;
+                        height: 100%;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        text-decoration: none;
+                        color: white;
+                        background-color: black;
+                        border: none;
+                        outline: none;
+                        transition: 200ms border, 200ms color, 200ms background-color;
+                        
+                        &:hover {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
