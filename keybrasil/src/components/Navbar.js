@@ -10,11 +10,14 @@ function Navbar() {
 
         cat_btn.mouseenter(() => {
             drop_menu.removeClass("hidden");
+            drop_menu.addClass("open");
             cat_btn.addClass("open");
         });
         
         drop_menu.mouseleave(() => {
             drop_menu.addClass("hidden");
+            drop_menu.removeClass("open");
+            
             cat_btn.removeClass("open");
         });
     },[]);

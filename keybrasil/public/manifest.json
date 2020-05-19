@@ -3,7 +3,7 @@
   "name": "KeyBrasil Teclados mecanicos",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "/icons/keyboard.svg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }

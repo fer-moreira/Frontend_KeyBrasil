@@ -1,0 +1,18 @@
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: 0px 0;
+    }
+    100% {
+        background-position: 100em 0;
+    }
+}
+
+
+@mixin loading ($speed) {
+    animation-duration: $speed;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: fff;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+}

@@ -1,0 +1,209 @@
+@import '../../styles/scss/includes/variables.scss';
+@import '../../styles/scss/mixins/mixins.scss';
+
+
+
+.sh_container {
+    height: 75vh;
+    background-color: $white;
+    display: grid;
+    grid-template-rows: 90% 10%;
+
+    &__item {
+        .slideshow.active {
+            height: 100% !important;
+        }
+
+        .slideshow.deactive {
+            height: 0% !important;
+            overflow: hidden;
+        }
+
+        .slideshow {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            transition: 200ms height;
+            
+            &__info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                margin-right: 20px;
+
+                &__container {
+                    display: flex;
+                    flex-direction: column;
+
+                    &__brand {
+                        font-size: 40px;
+                        font-family: $general-font;
+                        font-weight: 300;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    &__name {
+                        font-size: 60px;
+                        font-family: $general-font;
+                        font-weight: 800;
+                        margin: 0;
+                        padding: 0;
+                        word-wrap: break-word;
+                        max-width: 400px;
+                    }
+
+                    &__price {
+                        font-size: 60px;
+                        font-family: $general-font;
+                        font-weight: 200;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    &__button {
+                        font-family: $general-font;
+                        font-size: 20px;
+                        font-weight: 200;
+                        text-align: center;
+                        text-decoration: none;
+                        color: $white;
+                        background-color: $black;
+                        outline: none;
+                        max-width: 150px;
+                        padding: 12px 0px;
+                        margin-top: 20px;
+                        border-radius: 500px;
+                    }
+                }
+            }
+
+            &__image {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                &__img {
+                    max-width: 90%;
+                    max-height: 100%;
+                }
+            }
+        }
+
+        .loading__slideshow {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            transition: 200ms height;
+            
+            &__info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                margin-right: 20px;
+
+                &__container {
+                    display: flex;
+                    flex-direction: column;
+
+                    &__brand {
+                        font-size: 40px;
+                        font-family: $general-font;
+                        font-weight: 300;
+                        margin: 0;
+                        padding: 0;
+                        color: transparent;
+                        border-radius: 100px;
+                        @include loading(15s);
+                    }
+
+                    &__name {
+                        font-size: 60px;
+                        font-family: $general-font;
+                        font-weight: 800;
+                        margin: 15px 0;
+                        padding: 0;
+                        word-wrap: break-word;
+                        max-width: 400px;
+                        color: transparent;
+                        border-radius: 100px;
+                        @include loading(15s);
+                    }
+
+                    &__price {
+                        font-size: 60px;
+                        font-family: $general-font;
+                        font-weight: 200;
+                        margin: 0;
+                        padding: 0;
+                        color: transparent;
+                        border-radius: 100px;
+                        @include loading(15s);
+                    }
+                    &__button {
+                        font-family: $general-font;
+                        font-size: 20px;
+                        font-weight: 200;
+                        text-align: center;
+                        text-decoration: none;
+                        color: transparent;
+                        outline: none;
+                        max-width: 150px;
+                        padding: 12px 0px;
+                        margin-top: 20px;
+                        border-radius: 500px;
+                        @include loading(15s);
+                    }
+                }
+            }
+
+            &__image {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                &__img {
+                    height:250px;
+                    width: 750px;
+                    border-radius: 20px;
+                    @include loading(3s);
+                }
+            }
+        }
+    }
+    
+    .slidecount {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+
+        &__dots {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            &__dot {
+                margin: 5px;
+                height: 10px;
+                width: 10px;
+                background-color: transparent;
+                border-style: solid;
+                border-radius: 20px;
+                border-color: $black;
+                border-width: 2px;
+                transition: 200ms background-color, 200ms border-color, 200ms border-radius;
+            }
+        }
+
+        .dot-active {
+            background-color: $black;
+            border-color: $black;
+            border-radius: 0px;
+            height: 10px;
+            width: 10px;
+        }
+    }
+}

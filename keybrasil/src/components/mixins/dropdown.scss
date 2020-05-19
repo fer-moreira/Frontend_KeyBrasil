@@ -1,5 +1,11 @@
 .dropdown.hidden {
-    display: none;
+    height: 0px;
+    opacity: 0%;
+}
+
+.dropdown.open {
+    height: 350px;
+    opacity: 100%;
 }
 
 .dropdown {
@@ -11,6 +17,10 @@
     align-items: center;
     top: 140px;
     transform: translateX(50px);
+    filter: drop-shadow(0px 0px 10px black);
+    overflow: hidden;
+    transition: 400ms height, 700ms opacity;
+    z-index: 2;
 
     .square {
         border-style: solid;
