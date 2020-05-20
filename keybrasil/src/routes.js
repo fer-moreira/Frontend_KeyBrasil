@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Homepage from './components/Homepage';
-import Product from './components/Product';
+import ProductComponent from './components/Product';
 
 
 function Routes () {
@@ -15,7 +15,7 @@ function Routes () {
     <Router>
       <Switch>
         <Route path="/" exact component={Homepage}/>
-        <Route path="/product/:slug" exact component={Product}/>
+        <Route path="/product/:slug" exact component={ProductComponent}/>
       </Switch>
     </Router>
   );
